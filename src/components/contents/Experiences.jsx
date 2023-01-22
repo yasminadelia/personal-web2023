@@ -3,7 +3,7 @@ import React from "react";
 const Experiences = () => {
   return (
     <section className="my-8">
-      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border-2 drop-shadow-lg text-2xl">
+      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border drop-shadow-lg text-2xl">
         Work Experiences
       </h2>
       <ul className="space-y-4">

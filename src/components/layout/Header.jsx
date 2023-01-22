@@ -3,14 +3,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav className="h-20 px-12 flex items-center bg-theme3 rounded-b-xl border-b-4 drop-shadow-lg border-black">
+    <nav className="h-20 px-12 flex items-center bg-theme3 rounded-b-xl border-b drop-shadow-lg border-black">
       <ul className="grid grid-flow-col justify-left">
         {links.map(({ label, href }) => (
-          <li
-            key={label}
-            className="font-semibold text-center rounded-full p-1 mr-5 transition ease-in-out duration-300
-            hover:bg-theme2 hover:border-b-4 hover:border-r-4 hover:scale-105"
-          >
+          <li key={label} className="button-default mr-7">
             <Link href={href}>{label}</Link>
           </li>
         ))}

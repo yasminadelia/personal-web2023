@@ -13,7 +13,7 @@ import PostgreLogo from "../../assets/images/logo-postgresql.svg";
 const Skills = () => {
   return (
     <section className="mb-8">
-      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border-2 drop-shadow-lg text-2xl">
+      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border drop-shadow-lg text-2xl">
         Skills
       </h2>
       {/* <ul className="pl-8 mb-4 list-disc">

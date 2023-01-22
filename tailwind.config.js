@@ -8,6 +8,9 @@ module.exports = {
       theme2: "#FFF7B4",
       theme3: "#F6D79C",
       theme4: "#FFCD6F",
+      transparent: "transparent",
+      black: "black",
+      white: "white",
     },
     fontFamily: {
       old: ["Old Standard TT", "serif"],
