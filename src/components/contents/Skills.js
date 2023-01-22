@@ -12,25 +12,27 @@ import PostgreLogo from "../../assets/images/logo-postgresql.svg";
 
 const Skills = () => {
   return (
-    <div>
-      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full text-2xl">Skills</h2>
+    <section className="mb-8">
+      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border-2 drop-shadow-lg text-2xl">
+        Skills
+      </h2>
       {/* <ul className="pl-8 mb-4 list-disc">
         {skills.map((skill) => (
           <li key={skill}>{skill}</li>
         ))}
       </ul> */}
-      <ul className="flex flex-wrap space-x-2 pl-2">
+      <ul className="flex flex-wrap pl-2">
         {tools.map(({ logo, name }) => (
           <li
             key={name}
-            className="flex flex-col justify-center items-center space-y-2 mb-2"
+            className="flex flex-col justify-center items-center space-y-2 mb-3 mr-3"
           >
             <Image src={logo} alt={`${name} logo`} width={60} />
             <p>{name}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
@@ -41,7 +43,7 @@ const skills = ["team work", "attention to detail"];
 const tools = [
   {
     logo: ReactLogo,
-    name: "React",
+    name: "ReactJS",
   },
   {
     logo: JSLogo,

@@ -2,8 +2,8 @@ import React from "react";
 
 const Experiences = () => {
   return (
-    <div>
-      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full text-2xl">
+    <section className="my-8">
+      <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border-2 drop-shadow-lg text-2xl">
         Work Experiences
       </h2>
       <ul className="space-y-4">
@@ -21,7 +21,7 @@ const Experiences = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
@@ -43,14 +43,7 @@ const experiences = [
       "Develop the company's website using Next.js, TailwindCSS, and Ant Design components.",
   },
   {
-    role: "Teaching Assistant of Data Science",
-    company: "Universitas Indonesia",
-    period: "Aug 2021 - Apr 2022",
-    description:
-      "Develop the company's website using Next.js, TailwindCSS, and Ant Design components.",
-  },
-  {
-    role: "Teaching Assistant of Database",
+    role: "Teaching Assistant of Data Science & Database",
     company: "Universitas Indonesia",
     period: "Aug 2021 - Apr 2022",
     description:

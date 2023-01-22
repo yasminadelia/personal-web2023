@@ -3,12 +3,13 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav className="py-5 px-12 bg-theme3 rounded-b-xl">
-      <ul className="flex flex-row justify-left space-x-7">
+    <nav className="h-20 px-12 flex items-center bg-theme3 rounded-b-xl border-b-4 drop-shadow-lg border-black">
+      <ul className="grid grid-flow-col justify-left">
         {links.map(({ label, href }) => (
           <li
             key={label}
-            className="font-semibold rounded-full p-2 hover:bg-theme2 "
+            className="font-semibold text-center rounded-full p-1 mr-5 transition ease-in-out duration-300
+            hover:bg-theme2 hover:border-b-4 hover:border-r-4 hover:scale-105"
           >
             <Link href={href}>{label}</Link>
           </li>
