@@ -7,13 +7,11 @@ body {
   padding: 0;
   margin: 0;
   @apply font-sourcecode
-}
-
-.container {
-  @apply bg-theme1
+  
 }
 
 .main {
+  @apply bg-theme1;
   min-height: 100vh;
   padding: 2rem 2rem;
   flex: 1;
@@ -30,7 +28,7 @@ a {
   box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
   @apply font-old
 }
 

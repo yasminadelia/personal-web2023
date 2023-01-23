@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Experiences from "../components/contents/Experiences";
-import ProjectSection from "../components/contents/Projects";
-import Skills from "../components/contents/Skills";
+import Experiences from "../components/home/Experiences";
+import ProjectSection from "../components/home/Projects";
+import Skills from "../components/home/Skills";
 import Layout from "../components/layout/Layout";
 
 export default function Home() {
