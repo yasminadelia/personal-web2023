@@ -7,7 +7,9 @@ const Header = () => {
       <ul className="grid grid-flow-col justify-left">
         {links.map(({ label, href }) => (
           <li key={label} className="button-default mr-7">
-            <Link href={href}>{label}</Link>
+            <Link href={href} className="text-black hover:text-black">
+              {label}
+            </Link>
           </li>
         ))}
       </ul>
