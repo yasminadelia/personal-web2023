@@ -1,8 +1,8 @@
 import React from "react";
 
-const Experiences = () => {
+const ExperienceSection = () => {
   return (
-    <section className="my-8">
+    <section className="my-8 z-10">
       <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border drop-shadow-lg text-2xl">
         Work Experiences
       </h2>
@@ -25,7 +25,7 @@ const Experiences = () => {
   );
 };
 
-export default Experiences;
+export default ExperienceSection;
 
 const experiences = [
   {

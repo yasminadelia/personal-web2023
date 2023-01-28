@@ -13,7 +13,7 @@ const ProjectSection = () => {
           <li key={skill}>{skill}</li>
         ))}
       </ul> */}
-      <ul className="grid grid-cols-2 gap-4 pl-2">
+      <ul className="grid grid-cols-2 gap-10 pl-2">
         {projects.map(({ title, date, desc, tools, webLink, repoLink }) => (
           <CardProject
             key={title}

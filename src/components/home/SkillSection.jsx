@@ -10,9 +10,9 @@ import FigmaLogo from "../../assets/images/logo-figma.svg";
 import PythonLogo from "../../assets/images/logo-python.svg";
 import PostgreLogo from "../../assets/images/logo-postgresql.svg";
 
-const Skills = () => {
+const SkillSection = () => {
   return (
-    <section className="mb-8">
+    <section className="mb-8 z-10">
       <h2 className="py-2 px-4 my-4 bg-theme2 rounded-full border drop-shadow-lg text-2xl">
         Skills
       </h2>
@@ -36,7 +36,7 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillSection;
 
 const skills = ["team work", "attention to detail"];
 
