@@ -12,7 +12,10 @@ const CardProject = ({ title, date, desc, tools, webLink, repoLink }) => {
         transition duration-300 ease-in-out hover:border-black"
     >
       <div className="h-full rounded-xl border">
-        <Link href={"#"} className="text-black hover:text-black">
+        <Link
+          href={"#"}
+          className="text-black no-underline hover:text-black hover:no-underline"
+        >
           {/* <img></img> */}
           <div className="h-1/2 rounded-t-xl bg-white"></div>
           <div className="h-1/2 space-y-2 rounded-b-xl border-t bg-theme4 p-2">
