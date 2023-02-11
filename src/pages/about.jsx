@@ -14,13 +14,13 @@ const About = () => {
       </Head>
 
       <main className="main ">
-        <div className="flex flex-row items-start">
-          <div className="w-2/3">
-            <h1 className="text-gray-100 text-[2rem] mb-6 leading-relaxed">
+        <div className="flex flex-col-reverse items-start md:flex-row">
+          <div className="md:w-2/3">
+            <h1 className="text-gray-100 mt-5 mb-6 text-[2rem] leading-relaxed md:mt-0">
               Hi there, you’ve visited About Me page.
             </h1>
 
-            <p className="w-11/12">
+            <p className="text-justify md:w-11/12">
               So, let me introduce myself a little bit more. I&apos;m Yasmin,
               others also called me as yas, min, asmin, yamin, mimin, minmin. I
               graduated as a Bachelor of Computer Science in September 2022.
@@ -51,7 +51,7 @@ const About = () => {
           <Image
             src={ProfileImage}
             alt="profile photo"
-            className="mt-4 w-1/3 object-contain border border-black rounded-xl drop-shadow-lg"
+            className="mt-4 rounded-xl border border-black object-contain drop-shadow-lg md:w-1/3"
           ></Image>
         </div>
 

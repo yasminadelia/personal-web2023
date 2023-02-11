@@ -7,15 +7,15 @@ import LinkIcon from "../assets/images/icon-link.svg";
 const CardProject = ({ title, date, desc, tools, webLink, repoLink }) => {
   return (
     <li
-      className="bg-transparent rounded-[20px] drop-shadow-lg 
-        transition ease-in-out duration-300 h-80
-        border-b-8 border-r-8 border-transparent hover:border-black"
+      className="h-80 rounded-[20px] border-b-8 
+        border-r-8 border-transparent bg-transparent drop-shadow-lg
+        transition duration-300 ease-in-out hover:border-black"
     >
-      <div className="border rounded-xl h-full">
-        <Link href={"/projects"} className="text-black hover:text-black">
+      <div className="h-full rounded-xl border">
+        <Link href={"#"} className="text-black hover:text-black">
           {/* <img></img> */}
-          <div className="bg-white h-1/2 rounded-t-xl"></div>
-          <div className="bg-theme4 rounded-b-xl p-2 space-y-2 border-t h-1/2">
+          <div className="h-1/2 rounded-t-xl bg-white"></div>
+          <div className="h-1/2 space-y-2 rounded-b-xl border-t bg-theme4 p-2">
             <div className="flex flex-row justify-between ">
               <div className="flex flex-row items-end space-x-3">
                 <h3 className="text-lg font-bold">{title}</h3>

@@ -3,11 +3,14 @@ import React from "react";
 
 const Header = () => {
   return (
-    <nav className="h-20 px-12 flex items-center bg-theme3 rounded-b-xl border-b drop-shadow-lg border-black">
-      <ul className="grid grid-flow-col justify-left">
+    <nav className="flex h-20 items-center rounded-b-xl border-b border-black bg-theme3 px-12 drop-shadow-lg">
+      <ul className="justify-left grid grid-flow-col">
         {links.map(({ label, href }) => (
-          <li key={label} className="button-default mr-7">
-            <Link href={href} className="text-black hover:text-black">
+          <li key={label} className="button-default mr-7 whitespace-nowrap">
+            <Link
+              href={href}
+              className="text-black no-underline hover:text-black hover:no-underline"
+            >
               {label}
             </Link>
           </li>

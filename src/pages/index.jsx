@@ -17,14 +17,14 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        <h1 className="text-gray-100 text-[3rem] mb-6 leading-relaxed z-10">
+        <h1 className="text-gray-100 z-10 mb-6 text-4xl leading-relaxed md:text-[3rem]">
           Hello, <br /> I&apos;m
-          <span className="p-2 m-2 bg-theme2 rounded-full border drop-shadow-lg">
+          <span className="m-2 rounded-full border bg-theme2 p-2 drop-shadow-lg">
             Yasmin Adelia
           </span>
         </h1>
 
-        <p className="w-3/4 z-10">
+        <p className="z-10 text-justify md:w-3/4">
           I&apos;m a computer science fresh graduate, based in Jakarta,
           Indonesia. Currently working as a Front-end Developer using NextJS and
           TailwindCSS.

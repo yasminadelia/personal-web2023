@@ -16,16 +16,16 @@ const Projects = () => {
       </Head>
 
       <main className="main">
-        <h1 className="text-gray-100 text-[2rem] mb-6 leading-relaxed">
+        <h1 className="text-gray-100 mb-6 text-[2rem] leading-relaxed">
           Projects
         </h1>
 
-        <p className="w-3/4">
+        <p className="md:w-3/4">
           Here are some of the projects that I have done in university courses,
           internship, work, and personal projects.
         </p>
 
-        <ul className="grid grid-cols-3 gap-4 mt-10">
+        <ul className="mt-10 grid gap-4 md:grid-cols-3">
           {projects.map(({ title, date, desc, tools, webLink, repoLink }) => (
             <CardProject
               key={title}
@@ -66,7 +66,7 @@ const projects = [
     title: "MatkulPanda",
     date: "2020",
     desc: "Website used for read and give testimonies on courses in Fasilkom UI",
-    tools: "HTML, CSS, Django",
+    tools: "HTML, CSS, Bootstrap, Django",
     webLink: "/",
     repoLink: "/",
   },

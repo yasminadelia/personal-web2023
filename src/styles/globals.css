@@ -18,12 +18,12 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   @apply text-theme5
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   @apply text-theme4
 }
 
