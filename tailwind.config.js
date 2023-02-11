@@ -8,6 +8,7 @@ module.exports = {
       theme2: "#FFF7B4",
       theme3: "#F6D79C",
       theme4: "#FFCD6F",
+      theme5: "#D6910F",
       transparent: "transparent",
       black: "black",
       white: "white",
