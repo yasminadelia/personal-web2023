@@ -23,21 +23,21 @@ const About = () => {
             <p className="text-justify md:w-11/12">
               So, let me introduce myself a little bit more. I&apos;m Yasmin,
               others also called me as yas, min, asmin, yamin, mimin, minmin. I
-              graduated as a Bachelor of Computer Science in September 2022.
+              graduated with a Bachelor of Computer Science in September 2022.
               <br />
               <br />
               Currently, I really enjoy my life as a fully-remote front-end
               developer. I&apos;ve known and used ReactJS since February 2021
               during undergraduate course, internship, and current job, but
               I&apos;m still learning until now through online courses,
-              projects, tweets, tiktok vids, or in other words{" "}
+              projects, tweets, TikTok vids, or in other words{" "}
               <strong>✨the internet✨</strong>. I&apos;m also planning to
               expand my skill in back-end development, so wish me luck.
               <br />
               <br />
-              Aside from coding stuffs, I love photography, coffee, Taylor
-              Swift, K-Drama, romanticizing my quite-boring-life on social
-              media, and music! Checkout my spotify playlists{" "}
+              Aside from coding stuff, I love photography, coffee, Taylor Swift,
+              K-Drama, romanticizing my quite boring life on social media, and
+              music! Check out my Spotify playlists{" "}
               <a
                 href="https://open.spotify.com/user/yasminadelia?si=f6aafec41c384d3a"
                 target={"_blank"}

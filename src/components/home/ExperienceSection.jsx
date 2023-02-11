@@ -38,7 +38,7 @@ const experiences = [
     company: "Mitramas Infosys Global",
     period: "Sep 2022 - Now",
     description:
-      "Developed the front-end of a website that used for manage recruitment, create resume, and manage employee payslip.",
+      "Developed website's front-end that used for manage recruitment, create resume, and manage employee payslip.",
     tools: "Next.js, TailwindCSS, Ant Design components, React PDF",
   },
   {
@@ -46,7 +46,7 @@ const experiences = [
     company: "Studycle",
     period: "Aug 2021 - Apr 2022",
     description:
-      "Developed the front-end of a learning system website for an institute based in Singapore.",
+      "Developed a learning system website's front-end for an institute based in Singapore.",
     tools: "ReactJS, TailwindCSS",
   },
   {

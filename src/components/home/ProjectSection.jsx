@@ -8,7 +8,12 @@ const ProjectSection = () => {
     <section className="mb-8 w-full">
       <div className="my-8 flex items-center justify-between rounded-full border bg-theme2 py-2 px-4  drop-shadow-lg">
         <h2 className="text-2xl">Highlighted Projects</h2>
-        <Link href="/projects">View more</Link>
+        <Link
+          href="/projects"
+          className="text-black hover:text-black hover:opacity-70"
+        >
+          View more
+        </Link>
       </div>
       {/* <ul className="pl-8 mb-4 list-disc">
         {skills.map((skill) => (
