@@ -1,9 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import ProjectSection from "../components/home/ProjectSection";
 import Layout from "../components/layout/Layout";
-import Blobs1 from "../assets/images/blobs1.svg";
 import ExperienceSection from "../components/home/ExperienceSection";
 import SkillSection from "../components/home/SkillSection";
 
@@ -13,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Yasmin Adelia</title>
         <meta name="description" content="Yasmin Adelia's personal website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="main">
