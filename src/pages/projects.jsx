@@ -1,9 +1,13 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import CardProject from "../components/CardProject";
 import Layout from "../components/layout/Layout";
+import { projects } from "../content";
+import ModalProject from "../components/modals/ModalProject";
 
 const Projects = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentModalData, setCurrentModalData] = useState(false);
   return (
     <Layout>
       <Head>
@@ -12,7 +16,7 @@ const Projects = () => {
           name="description"
           content="Projects that have been done by Yasmin"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="main">
@@ -26,56 +30,31 @@ const Projects = () => {
         </p>
 
         <ul className="mt-10 grid gap-4 md:grid-cols-3">
-          {projects.map(({ title, date, desc, tools, webLink, repoLink }) => (
+          {projects.map((item) => (
             <CardProject
-              key={title}
-              title={title}
-              date={date}
-              desc={desc}
-              tools={tools}
-              webLink={webLink}
-              repoLink={repoLink}
+              key={item.title}
+              title={item.title}
+              date={item.date}
+              desc={item.desc}
+              tools={item.tools}
+              webLink={item.webLink}
+              repoLink={item.repoLink}
+              onClick={() => {
+                setCurrentModalData(item);
+                setIsModalOpen(true);
+              }}
             />
           ))}
         </ul>
       </main>
+
+      <ModalProject
+        projectData={currentModalData}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </Layout>
   );
 };
 
 export default Projects;
-
-const projects = [
-  {
-    title: "Learning System",
-    date: "2021",
-    desc: "Learning system web for an institute in Singapore",
-    tools: "ReactJS, TailwindCSS",
-    webLink: "/",
-    repoLink: "/",
-  },
-  {
-    title: "UMKM Platform",
-    date: "2021",
-    desc: "Website for applying enterprise (UMKM) permission.",
-    tools: "ReactJS, TailwindCSS, Django REST Framework",
-    webLink: "/",
-    repoLink: "/",
-  },
-  {
-    title: "MatkulPanda",
-    date: "2020",
-    desc: "Website used for read and give testimonies on courses in Fasilkom UI",
-    tools: "HTML, CSS, Bootstrap, Django",
-    webLink: "/",
-    repoLink: "/",
-  },
-  {
-    title: "Farmakami",
-    date: "2020",
-    desc: "A website for pharmacy information system",
-    tools: "HTML, CSS, Bootstrap, Django",
-    webLink: "/",
-    repoLink: "/",
-  },
-];

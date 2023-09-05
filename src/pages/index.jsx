@@ -3,8 +3,14 @@ import ProjectSection from "../components/home/ProjectSection";
 import Layout from "../components/layout/Layout";
 import ExperienceSection from "../components/home/ExperienceSection";
 import SkillSection from "../components/home/SkillSection";
+import { useState } from "react";
+import Modal from "../components/modals/modal";
+import ModalProject from "../components/modals/ModalProject";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentModalData, setCurrentModalData] = useState({});
+
   return (
     <Layout>
       <Head>
@@ -22,9 +28,9 @@ export default function Home() {
         </h1>
 
         <p className="z-10 text-justify md:w-3/4">
-          I&apos;m a computer science fresh graduate, based in Jakarta,
-          Indonesia. Currently working as a Front-end Developer using NextJS and
-          TailwindCSS.
+          I&apos;m an aspiring front-end engineer based in Jakarta, Indonesia.
+          Currently working as a Front-end Developer using NextJS and
+          TailwindCSS for more than a year.
         </p>
 
         {/* <img className={"absolute"} style={{ width: "20px" }} src={Blobs1} /> */}
@@ -38,8 +44,17 @@ export default function Home() {
 
         <ExperienceSection />
         <SkillSection />
-        <ProjectSection />
+        <ProjectSection
+          setIsModalOpen={setIsModalOpen}
+          setCurrentData={setCurrentModalData}
+        />
       </main>
+
+      <ModalProject
+        projectData={currentModalData}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </Layout>
   );
 }
