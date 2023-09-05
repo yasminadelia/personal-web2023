@@ -1,19 +1,22 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import ProjectSection from "../components/home/ProjectSection";
 import Layout from "../components/layout/Layout";
-import Blobs1 from "../assets/images/blobs1.svg";
 import ExperienceSection from "../components/home/ExperienceSection";
 import SkillSection from "../components/home/SkillSection";
+import { useState } from "react";
+import Modal from "../components/modals/modal";
+import ModalProject from "../components/modals/ModalProject";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentModalData, setCurrentModalData] = useState({});
+
   return (
     <Layout>
       <Head>
         <title>Yasmin Adelia</title>
         <meta name="description" content="Yasmin Adelia's personal website" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="main">
@@ -25,9 +28,9 @@ export default function Home() {
         </h1>
 
         <p className="z-10 text-justify md:w-3/4">
-          I&apos;m a computer science fresh graduate, based in Jakarta,
-          Indonesia. Currently working as a Front-end Developer using NextJS and
-          TailwindCSS.
+          I&apos;m an aspiring front-end engineer based in Jakarta, Indonesia.
+          Currently working as a Front-end Developer using NextJS and
+          TailwindCSS for more than a year.
         </p>
 
         {/* <img className={"absolute"} style={{ width: "20px" }} src={Blobs1} /> */}
@@ -41,8 +44,17 @@ export default function Home() {
 
         <ExperienceSection />
         <SkillSection />
-        <ProjectSection />
+        <ProjectSection
+          setIsModalOpen={setIsModalOpen}
+          setCurrentData={setCurrentModalData}
+        />
       </main>
+
+      <ModalProject
+        projectData={currentModalData}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </Layout>
   );
 }
