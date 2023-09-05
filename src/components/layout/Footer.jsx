@@ -27,7 +27,7 @@ const Footer = () => {
           </li>
         ))}
       </ul>
-      <p>Made with 🖤 by Yasmin Adelia</p>
+      <p>© 2023 Made with 🖤 by Yasmin Adelia</p>
     </footer>
   );
 };

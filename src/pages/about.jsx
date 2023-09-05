@@ -10,7 +10,7 @@ const About = () => {
       <Head>
         <title>About me</title>
         <meta name="description" content="About Yasmin" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="main ">
@@ -21,9 +21,9 @@ const About = () => {
             </h1>
 
             <p className="text-justify md:w-11/12">
-              So, let me introduce myself a little bit more. I&apos;m Yasmin,
-              others also called me as yas, min, asmin, yamin, mimin, minmin. I
-              graduated with a Bachelor of Computer Science in September 2022.
+              So, let me introduce myself a little bit more. I&apos;m Yasmin, I
+              graduated with a Bachelor of Computer Science degree in September
+              2022.
               <br />
               <br />
               Currently, I really enjoy my life as a fully-remote front-end
