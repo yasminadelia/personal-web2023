@@ -24,9 +24,9 @@ const Projects = () => {
           Projects
         </h1>
 
-        <p className="md:w-3/4">
-          Here are some of the projects that I have done in university courses,
-          internship, work, and personal projects.
+        <p>
+          Projects that I have done in university courses, internship, work, and
+          personal projects.
         </p>
 
         <ul className="mt-10 grid gap-4 md:grid-cols-3">
@@ -39,6 +39,7 @@ const Projects = () => {
               tools={item.tools}
               webLink={item.webLink}
               repoLink={item.repoLink}
+              coverImage={item?.coverImage}
               onClick={() => {
                 setCurrentModalData(item);
                 setIsModalOpen(true);

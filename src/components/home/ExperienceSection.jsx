@@ -5,7 +5,7 @@ import { experiences } from "../../content";
 const ExperienceSection = () => {
   return (
     <Section title={"Work Experiences"}>
-      <ul className="description space-y-4">
+      <ul className="description space-y-4 ">
         {experiences.map(({ role, company, period, description, tools }) => (
           <li key={company} className="flex flex-row space-x-2">
             <p className="text-4xl">🌻</p>
@@ -16,11 +16,11 @@ const ExperienceSection = () => {
                 <span className="ml-2">{period}</span>
               </p>
               {tools && (
-                <p className="text-justify text-sm">
+                <p className="md:text-justify text-sm">
                   <strong>Tools:</strong> {tools}
                 </p>
               )}
-              <ul className="mt-2 space-y-3 text-justify text-sm">
+              <ul className="mt-2 space-y-3 md:text-justify text-sm pr-8">
                 {description?.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}

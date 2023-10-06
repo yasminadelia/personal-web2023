@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import CardProject from "../CardProject";
 import Section from "./Section";
 import { projects } from "../../content";
-import Modal from "../modals/modal";
 
 const ProjectSection = ({ setIsModalOpen, setCurrentData }) => {
   return (
@@ -19,6 +17,7 @@ const ProjectSection = ({ setIsModalOpen, setCurrentData }) => {
             tools={item?.tools}
             webLink={item?.webLink}
             repoLink={item?.repoLink}
+            coverImage={item?.coverImage}
             onClick={() => {
               setCurrentData(item);
               setIsModalOpen(true);

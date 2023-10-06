@@ -9,13 +9,12 @@ const ModalProject = ({ projectData, isModalOpen, setIsModalOpen }) => {
           {projectData?.title} ({projectData?.date})
         </h1>
       }
-      width={40}
       show={isModalOpen}
       setShow={setIsModalOpen}
     >
-      <div className="flex flex-col gap-3">
-        <p>{projectData?.desc}</p>
-        <p className="overflow-hidden text-ellipsis text-sm font-semibold">
+      <div className="flex flex-col gap-5 h-full overflow-y-auto">
+        <div className="flex flex-col gap-5">{projectData?.desc}</div>
+        <p className="text-sm font-semibold bg-theme2 p-2 rounded-full mb-5 border">
           Tools: {projectData?.tools}
         </p>
       </div>

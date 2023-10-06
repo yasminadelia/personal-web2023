@@ -19,19 +19,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main className="main">
-        <h1 className="text-gray-100 z-10 mb-6 text-4xl leading-relaxed md:text-[3rem]">
-          Hello, <br /> I&apos;m
-          <span className="m-2 rounded-full border bg-theme2 p-2 drop-shadow-lg">
-            Yasmin Adelia
-          </span>
-        </h1>
+      <main className="main ">
+        <header className="flex flex-col justify-center items-center w-full">
+          <h1 className="text-gray-100 z-10 mb-5 text-4xl leading-relaxed md:text-[3rem] text-center">
+            Hello, I&apos;m
+            <span className="m-2 rounded-full border bg-theme2 p-2 drop-shadow-lg whitespace-nowrap">
+              Yasmin Adelia
+            </span>
+          </h1>
 
-        <p className="z-10 text-justify md:w-3/4">
-          I&apos;m an aspiring front-end engineer based in Jakarta, Indonesia.
-          Currently working as a Front-end Developer using NextJS and
-          TailwindCSS for more than a year.
-        </p>
+          <p className="z-10 text-center md:w-3/4">
+            I&apos;m an aspiring software engineer based in Jakarta, Indonesia.
+            Currently working as a Front-end Developer using NextJS and
+            TailwindCSS for more than a year.
+          </p>
+        </header>
 
         {/* <img className={"absolute"} style={{ width: "20px" }} src={Blobs1} /> */}
         {/* <Image
