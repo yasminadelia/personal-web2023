@@ -2,7 +2,7 @@ const ButtonSys = ({ onClick, className, children, bgColor, padding }) => {
   return (
     <button
       onClick={onClick}
-      className={`${className} rounded-full border-b-2 border-r-2 border-transparent
+      className={`${className} rounded-full border-b-2 border-r-2 border-transparent 
       bg-transparent text-center text-lg 
       transition duration-300 ease-in-out 
       hover:scale-110 

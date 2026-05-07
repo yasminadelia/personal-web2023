@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import CardProject from "../CardProject";
 import Section from "./Section";
 import { projects } from "../../content";
+import { ButtonSys } from "../buttons";
+import { ChevronRightIcon, ChevronUpIcon } from "../icons";
 
 const ProjectSection = ({ setIsModalOpen, setCurrentData }) => {
   return (
     <Section title={"Highlighted Projects"} id="projects">
-      <ul className="grid gap-4 pl-2 md:grid-cols-3">
+      <ul className="grid gap-6 pl-2 md:grid-cols-3">
         {projects.slice(0, 3).map((item) => (
           <CardProject
             key={item?.title}
@@ -27,12 +29,19 @@ const ProjectSection = ({ setIsModalOpen, setCurrentData }) => {
           />
         ))}
       </ul>
-      <Link
-        href="/projects"
-        className="m-5 flex justify-end text-black hover:text-black hover:opacity-70"
-      >
-        View more...
-      </Link>
+      <div className="mt-8 text-center">
+        <Link
+          href="/projects"
+          className="text-black hover:text-black no-underline hover:no-underline "
+        >
+          <ButtonSys bgColor={"bg-theme3"} padding={"p-3"}>
+            <span className="inline-flex items-center gap-2 font-bold">
+              View All Projects
+              <ChevronRightIcon color={"#000"} />
+            </span>
+          </ButtonSys>
+        </Link>
+      </div>
     </Section>
   );
 };

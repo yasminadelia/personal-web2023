@@ -10,6 +10,10 @@ import PostgreLogo from "./assets/images/logo-postgresql.svg";
 import ProjectCoverLS from "./assets/images/cover-project-ls.png";
 import ProjectCoverUMKM from "./assets/images/cover-project-umkm.png";
 import ProjectCoverFarmakami from "./assets/images/cover-project-farmakami.png";
+import LaravelLogo from "./assets/images/logo-laravel.svg";
+import RedisLogo from "./assets/images/logo-redis.svg";
+import MongoLogo from "./assets/images/logo-mongodb.svg";
+import PostmanLogo from "./assets/images/logo-postman.svg";
 
 const experiences = [
   {
@@ -89,16 +93,22 @@ const achievements = [
     icon: "🔒"
   },
   {
-    title: "Full-Stack Expertise",
-    description: "developing 8+ production modules across multiple applications.",
-    icon: "💻"
+    title: "Front-end Development",
+    description: "creating reusable UI components in ERP and learning management systems.",
   }
+  // {
+  //   title: "Full-Stack Expertise",
+  //   description: "developing 8+ production modules across multiple applications.",
+  //   icon: "💻"
+  // }
+
 ];
 
 const learningTopics = [
   // "Go (GoFiber)",
-  "Advanced Web Security (OWASP)",
-  "System Architecture & Scalability",
+  "Vue",
+  "Web Security (OWASP)",
+  // "System Architecture & Scalability",
   "Performance Optimization Techniques"
 ];
 
@@ -108,9 +118,14 @@ const projects = [
     date: "2021",
     badge: "Internship Project",
     metrics: "10+ reusable components",
+    teamSize: 5,
     desc: (
       <>
-        Built a web-based learning system for a Singapore institute, developing 10+ reusable components including post views, theme switcher, search functionality, and comment sections. Collaborated with a team of 5 front-end developers to deliver student/lecturer profiles, blog posts, and course task submission features.
+        Built a web-based learning system for a Singapore institute.
+        Developed 10+ reusable components including post views,
+        theme switcher, search functionality,
+        and comment sections.
+        Collaborated in a team to deliver student/lecturer profiles, blog posts, and course task submission features.
       </>
     ),
     tools: "ReactJS, TailwindCSS, Redux",
@@ -123,14 +138,17 @@ const projects = [
     date: "2021",
     badge: "University Project",
     metrics: "Full-stack with automated testing",
+    teamSize: 5,
     desc: (
       <>
         <p>
-          Developed a Small and Medium-sized Enterprise (UMKM) permission platform using Scrum methodology. Implemented automated testing achieving high code coverage using React Testing Library, Jest, and Django testing framework.
+          Developed a Small and Medium-sized Enterprise (UMKM) permission platform using Scrum methodology.
+          Implemented automated testing achieving high code coverage using React Testing Library, Jest, and Django testing framework.
         </p>
 
         <p>
-          Implemented front-end of core forms and modals, as well as back-end serializers and validators. Project followed complete Scrum framework with sprint planning, reviews, and retrospectives over a full semester.
+          Implemented front-end of core forms and modals, as well as back-end serializers and validators.
+          Project followed complete Scrum framework with sprint planning, reviews, and retrospectives over a full semester.
         </p>
       </>
     ),
@@ -144,14 +162,17 @@ const projects = [
     date: "2020",
     badge: "University Project",
     metrics: "Complex triggers & stored procedures",
+    teamSize: 6,
     desc: (
       <>
         <p>
-          Developed a pharmacy information system with advanced database features. Implemented CRUD operations for pharmacy and medicine management, utilizing PostgreSQL triggers and stored procedures to automate delivery status workflows.
+          Developed a pharmacy information system with advanced database features.
+          Implemented CRUD operations for pharmacy and medicine management,
+          utilizing PostgreSQL triggers and stored procedures to automate delivery status workflows.
         </p>
 
         <p>
-          Designed and executed complex database logic to ensure data integrity and automate business processes, demonstrating strong database architecture skills.
+          Designed and executed complex database logic to ensure data integrity and automate business processes.
         </p>
       </>
     ),
@@ -165,10 +186,13 @@ const projects = [
     date: "2020",
     badge: "University Project",
     metrics: "Complete SDLC implementation",
+    teamSize: 4,
     desc: (
       <>
         <p>
-          Designed and developed a course review platform for Fasilkom UI students. Led the complete software development lifecycle from requirements gathering to implementation, creating comprehensive documentation including use cases, activity diagrams, and sequence diagrams.
+          Designed and developed a course review platform for Fasilkom UI students.
+          Collaborated on the complete software development lifecycle from requirements gathering to implementation,
+          created comprehensive documentation including use cases, activity diagrams, and sequence diagrams.
         </p>
 
         <p>
@@ -187,7 +211,7 @@ const skills = ["team work", "attention to detail"];
 
 const toolCategories = [
   {
-    category: "Core Frontend",
+    category: "Frontend",
     tools: [
       { logo: ReactLogo, name: "ReactJS" },
       { logo: JSLogo, name: "JavaScript" },
@@ -199,14 +223,18 @@ const toolCategories = [
   {
     category: "Backend & Database",
     tools: [
+      { logo: LaravelLogo, name: "Laravel" },
       { logo: PythonLogo, name: "Python" },
       { logo: PostgreLogo, name: "PostgreSQL" },
+      { logo: RedisLogo, name: "Redis" },
+      { logo: MongoLogo, name: "MongoDB" },
     ]
   },
   {
-    category: "Tools & Others",
+    category: "Others",
     tools: [
       { logo: GitLogo, name: "Git" },
+      { logo: PostmanLogo, name: "Postman" },
       { logo: FigmaLogo, name: "Figma" },
     ]
   }

@@ -15,7 +15,9 @@ import { achievements } from "../content";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentModalData, setCurrentModalData] = useState({});
-  const [currentAchievementIndex, setCurrentAchievementIndex] = useState(0);
+  const [currentAchievementIndex, setCurrentAchievementIndex] = useState(() =>
+    Math.floor(Math.random() * achievements.length)
+  );
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
 
@@ -67,26 +69,24 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="z-10 text-center md:w-3/4 text-xl md:text-2xl font-semibold mb-6 min-h-[4rem] flex items-center justify-center">
-            <span>
-              Software Engineer experienced in {displayedText}
-              <span className="inline-block w-[3px] h-[1.2em] bg-black ml-1 animate-blink align-middle"></span>
-            </span>
+          <p className="z-10 text-center md:w-3/4 text-lg md:text-xl font-semibold  min-h-[4rem] flex items-center justify-center">
+            Software Engineer experienced in {displayedText}
+            <span className="inline-block w-[3px] h-[1.2em] bg-black ml-1 animate-blink align-middle"></span>
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mt-4">
-            <Link
+            {/* <Link
               href="#projects"
               className="font-semibold text-black no-underline hover:text-black hover:no-underline "
             >
               <ButtonSys
                 className="whitespace-nowrap"
                 bgColor={"bg-theme3"}
-                padding="p-5"
+                padding="p-3"
               >
-                <h5>View Projects</h5>
+                <p>View Projects</p>
               </ButtonSys>
-            </Link>
+            </Link> */}
 
             <Link
               href="#contact"
@@ -95,9 +95,9 @@ export default function Home() {
               <ButtonSys
                 className="whitespace-nowrap"
                 bgColor={"bg-theme3"}
-                padding="p-5"
+                padding="p-3"
               >
-                <h5>Contact Me</h5>
+                <p>Contact Me</p>
               </ButtonSys>
             </Link>
           </div>

@@ -6,26 +6,41 @@ import { toolCategories } from "../../content";
 
 const SkillSection = () => {
   return (
-    <Section title="Tech Stack">
-      <div className="space-y-8">
+    <Section title="Tech Stacks">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2">
         {toolCategories.map(({ category, tools }) => (
-          <div key={category} className="px-2">
-            <h3 className="text-xl font-bold mb-4 text-center md:text-left">
-              {category}
-            </h3>
-            <ul className="flex flex-wrap justify-center md:justify-start gap-4">
+          <div
+            key={category}
+            className="rounded-xl border-2 border-black  bg-theme3 p-6 
+            shadow-lg hover:shadow-xl"
+          >
+            {/* Category Header */}
+            <div className="text-center mb-4 pb-3 border-b-2 border-black/20">
+              <h3 className="text-lg font-bold">{category}</h3>
+            </div>
+
+            {/* Tech Stack Items */}
+            <div className="flex flex-wrap justify-center gap-3">
               {tools.map(({ logo, name }) => (
-                <li
+                <div
                   key={name}
-                  className="flex flex-col items-center justify-center space-y-2 p-4 rounded-xl 
-                  border-2 border-transparent hover:border-black hover:bg-theme2 
-                  transition duration-300 hover:scale-110"
+                  className="group flex flex-col items-center gap-1 p-3 rounded-lg bg-white border-2 border-black/10
+                  hover:border-black"
+                  title={name}
                 >
-                  <Image src={logo} alt={`${name} logo`} width={60} />
-                  <p className="font-semibold">{name}</p>
-                </li>
+                  <Image
+                    src={logo}
+                    alt={`${name} logo`}
+                    width={40}
+                    height={40}
+                    className="group-hover:scale-110 transition-transform"
+                  />
+                  <span className="text-xs font-semibold text-center">
+                    {name}
+                  </span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
       </div>

@@ -9,7 +9,7 @@ import Image from "next/image";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex flex-col items-center justify-center rounded-t-xl border-t bg-theme3 py-8 px-12 font-semibold drop-shadow-lg">
+    <footer className="flex flex-col items-center justify-center border-t bg-theme3 py-8 px-12 font-semibold drop-shadow-lg">
       {/* <div className="mb-4 text-center">
         <p className="text-lg font-bold mb-2">✨ Open to New Opportunities</p>
         <a

@@ -4,6 +4,7 @@ import React from "react";
 import EarthIcon from "../assets/images/icon-earth.svg";
 import LinkIcon from "../assets/images/icon-link.svg";
 import { limitText } from "../helper";
+import { PolaroidIcon, ToolsIcon } from "./icons";
 
 const CardProject = ({
   title,
@@ -21,33 +22,44 @@ const CardProject = ({
     <li
       className="min-h-[300px] rounded-[20px] border-b-8 
         border-r-8 border-transparent bg-transparent drop-shadow-lg cursor-pointer
-        transition duration-300 ease-in-out hover:border-black hover:scale-[1.02] md:min-h-[500px]"
+        transition duration-300 ease-in-out hover:border-black hover:scale-[1.02] md:min-h-[520px]"
       onClick={onClick}
     >
-      <div className="h-full rounded-xl border">
-        <div className={`relative h-1/2 rounded-t-xl sm:h-1/3 lg:h-1/2`}>
+      <div className="h-full rounded-xl border-2 border-black flex flex-col">
+        <div className={`relative h-48 rounded-t-xl flex-shrink-0`}>
           {coverImage ? (
             <Image
               src={coverImage}
               alt="Project cover"
-              className="object-cover h-full w-full rounded-t-xl "
+              className="object-cover h-full w-full rounded-t-xl"
             ></Image>
           ) : (
-            <div className="flex h-full items-center justify-center bg-gradient-to-br from-theme2 to-theme4">
-              <p className="text-4xl">📱</p>
+            <div className="flex h-full items-center justify-center bg-gradient-to-br from-theme2 to-theme4 rounded-t-xl">
+              <PolaroidIcon size={"48px"} />
             </div>
           )}
           {badge && (
             <div className="absolute top-2 left-2">
-              <span className="bg-theme2 text-black text-xs font-bold px-3 py-1 rounded-full border-2 border-black">
+              <span className="bg-theme2 text-black text-xs font-bold px-3 py-1 rounded-full border-2 border-black shadow-md">
                 {badge}
               </span>
             </div>
           )}
           <div className="absolute right-2 bottom-2 flex flex-row space-x-2">
             {!!webLink && (
-              <a href={webLink} target="_blank" rel="noreferrer">
-                <Image src={EarthIcon} alt="earth icon" />
+              <a
+                href={webLink}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white rounded-lg p-2 hover:bg-theme2 border border-black shadow-md transition-all"
+              >
+                <Image
+                  src={EarthIcon}
+                  alt="earth icon"
+                  width={20}
+                  height={20}
+                />
               </a>
             )}
             {!!repoLink && (
@@ -56,31 +68,40 @@ const CardProject = ({
                 target="_blank"
                 rel="noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="bg-theme4 rounded-lg p-2 hover:bg-theme2"
+                className="bg-white rounded-lg p-2 hover:bg-theme2 border border-black shadow-md transition-all"
               >
-                <Image src={LinkIcon} alt="link icon" />
+                <Image src={LinkIcon} alt="link icon" width={20} height={20} />
               </a>
             )}
           </div>
         </div>
-        <div className="h-1/2 space-y-2 rounded-b-xl border-t bg-theme4 p-2 sm:h-2/3 lg:h-1/2">
+        <div className="flex-1 flex flex-col space-y-2 rounded-b-xl border-t-2 border-black bg-theme3 p-4">
           <div className="flex flex-row items-center justify-between">
-            <h3 className="text-md font-bold lg:text-lg">{title}</h3>
-            <h4 className="text-md px-2 bg-theme2 rounded-full border">
+            <h3 className="text-md font-bold lg:text-lg flex-1 mr-2">
+              {title}
+            </h3>
+            <p className="text-sm px-3 py-1 bg-theme2 rounded-full border border-black whitespace-nowrap">
               {date}
-            </h4>
+            </p>
           </div>
           {metrics && (
-            <p className="text-sm font-semibold text-theme5 bg-theme3 px-2 py-1 rounded-md inline-block">
-              {metrics}
-            </p>
+            <div className="flex items-center gap-1">
+              <p className="text-sm font-semibold text-theme5 bg-white px-2 py-1 rounded-md inline-block border border-black/20">
+                {metrics}
+              </p>
+            </div>
           )}
-          <div className="grid grid-cols-1 gap-3 max-h-12 md:max-h-36 overflow-clip">
-            {desc}
+          <div className="flex-1 overflow-hidden">
+            <div className="line-clamp-3 md:line-clamp-5 lg:line-clamp-6 text-sm leading-relaxed">
+              {desc}
+            </div>
           </div>
-          <p className="overflow-hidden text-ellipsis text-sm font-semibold">
-            Tools: {limitText(tools)}
-          </p>
+          <div className="pt-2 mt-auto border-t border-black/10 flex items-start gap-2">
+            <ToolsIcon size={16} color={"#000"} />{" "}
+            <p className="text-xs font-semibold text-black/70">
+              {limitText(tools, 50)}
+            </p>
+          </div>
         </div>
       </div>
     </li>
