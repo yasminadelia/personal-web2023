@@ -20,16 +20,17 @@ const Projects = () => {
       </Head>
 
       <main className="main">
-        <h1 className="text-gray-100 mb-6 text-[2rem] leading-relaxed">
-          Projects
-        </h1>
+        <div className="mb-10">
+          <h1 className="text-gray-100 mb-4 text-[1.5rem] md:text-[2rem] leading-relaxed font-bold">
+            All Projects
+          </h1>
+          <p className="text-lg md:text-xl">
+            A collection of projects from university courses, internship, work,
+            and self-learning.
+          </p>
+        </div>
 
-        <p>
-          Projects that I have done in university courses, internship, work, and
-          personal projects.
-        </p>
-
-        <ul className="mt-10 grid gap-4 md:grid-cols-3">
+        <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((item) => (
             <CardProject
               key={item.title}
@@ -40,6 +41,8 @@ const Projects = () => {
               webLink={item.webLink}
               repoLink={item.repoLink}
               coverImage={item?.coverImage}
+              badge={item?.badge}
+              metrics={item?.metrics}
               onClick={() => {
                 setCurrentModalData(item);
                 setIsModalOpen(true);
