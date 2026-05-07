@@ -7,10 +7,20 @@ import MailLogo from "../../assets/images/logo-mail.svg";
 import Image from "next/image";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="flex flex-col items-center justify-center rounded-t-xl border-t bg-theme3 py-8 px-12 font-semibold drop-shadow-lg">
-      {/* TODO: add contact and porto links */}
-      <ul className="mb-5 flex flex-row">
+      {/* <div className="mb-4 text-center">
+        <p className="text-lg font-bold mb-2">✨ Open to New Opportunities</p>
+        <a
+          href="mailto:yasminadelia11@gmail.com"
+          className="text-theme5 hover:text-black text-lg font-semibold underline"
+        >
+          yasminadelia11@gmail.com
+        </a>
+      </div> */}
+
+      {/* <ul className="mb-5 flex flex-row">
         {links.map(({ logo, name, url }) => (
           <li
             key={name}
@@ -20,14 +30,14 @@ const Footer = () => {
               href={url}
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg p-2 hover:bg-theme2"
+              className="rounded-lg p-2 hover:bg-theme2 transition duration-300"
             >
               <Image src={logo} alt={`${name} logo`} width={40} />
             </a>
           </li>
         ))}
-      </ul>
-      <p>© 2023 Made with 🖤 by Yasmin Adelia</p>
+      </ul> */}
+      <p>© {currentYear} Made with 🖤 by Yasmin Adelia</p>
     </footer>
   );
 };

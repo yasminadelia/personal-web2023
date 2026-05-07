@@ -2,11 +2,11 @@ import React, { Children, useState } from "react";
 import { ChevronUpIcon } from "../icons";
 import { ButtonSys } from "../buttons";
 
-const Section = ({ title, children }) => {
+const Section = ({ title, children, id }) => {
   const [show, setShow] = useState(true);
 
   return (
-    <section className="z-10 my-8 ">
+    <section className="z-10 my-8" id={id}>
       <div className="flex items-center justify-between rounded-full border bg-theme2 py-2 px-4 mb-5 text-2xl drop-shadow-lg">
         <h2>{title}</h2>
         <ButtonSys

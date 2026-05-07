@@ -3,13 +3,52 @@ import ProjectSection from "../components/home/ProjectSection";
 import Layout from "../components/layout/Layout";
 import ExperienceSection from "../components/home/ExperienceSection";
 import SkillSection from "../components/home/SkillSection";
-import { useState } from "react";
+import AchievementsSection from "../components/home/AchievementsSection";
+import ContactSection from "../components/home/ContactSection";
+import { useState, useEffect } from "react";
 import Modal from "../components/modals/modal";
 import ModalProject from "../components/modals/ModalProject";
+import { ButtonSys } from "../components/buttons";
+import Link from "next/link";
+import { achievements } from "../content";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentModalData, setCurrentModalData] = useState({});
+  const [currentAchievementIndex, setCurrentAchievementIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  // Typing animation effect
+  useEffect(() => {
+    const fullText = achievements[currentAchievementIndex].description;
+    let currentIndex = 0;
+    setDisplayedText("");
+    setIsTyping(true);
+
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setDisplayedText(fullText.substring(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typingInterval);
+      }
+    }, 60); // Speed of typing (50ms per character)
+
+    return () => clearInterval(typingInterval);
+  }, [currentAchievementIndex]);
+
+  // Change achievement every 10 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAchievementIndex(
+        (prevIndex) => (prevIndex + 1) % achievements.length
+      );
+    }, 10000); // Change every 10 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Layout>
@@ -20,7 +59,7 @@ export default function Home() {
       </Head>
 
       <main className="main ">
-        <header className="flex flex-col justify-center items-center w-full">
+        <header className="flex flex-col justify-center items-center w-full mb-8">
           <h1 className="text-gray-100 z-10 mb-5 text-4xl leading-relaxed md:text-[3rem] text-center">
             Hello, I&apos;m
             <span className="m-2 rounded-full border bg-theme2 p-2 drop-shadow-lg whitespace-nowrap">
@@ -28,11 +67,40 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="z-10 text-center md:w-3/4">
-            I&apos;m an aspiring software engineer based in Jakarta, Indonesia.
-            Currently working as a Front-end Developer using NextJS and
-            TailwindCSS for more than a year.
+          <p className="z-10 text-center md:w-3/4 text-xl md:text-2xl font-semibold mb-6 min-h-[4rem] flex items-center justify-center">
+            <span>
+              Software Engineer experienced in {displayedText}
+              <span className="inline-block w-[3px] h-[1.2em] bg-black ml-1 animate-blink align-middle"></span>
+            </span>
           </p>
+
+          <div className="flex flex-wrap gap-4 justify-center mt-4">
+            <Link
+              href="#projects"
+              className="font-semibold text-black no-underline hover:text-black hover:no-underline "
+            >
+              <ButtonSys
+                className="whitespace-nowrap"
+                bgColor={"bg-theme3"}
+                padding="p-5"
+              >
+                <h5>View Projects</h5>
+              </ButtonSys>
+            </Link>
+
+            <Link
+              href="#contact"
+              className="font-semibold text-black no-underline hover:text-black hover:no-underline "
+            >
+              <ButtonSys
+                className="whitespace-nowrap"
+                bgColor={"bg-theme3"}
+                padding="p-5"
+              >
+                <h5>Contact Me</h5>
+              </ButtonSys>
+            </Link>
+          </div>
         </header>
 
         {/* <img className={"absolute"} style={{ width: "20px" }} src={Blobs1} /> */}
@@ -44,12 +112,14 @@ export default function Home() {
           // style={{ float: "right" }}
         ></Image> */}
 
+        {/* <AchievementsSection /> */}
         <ExperienceSection />
         <SkillSection />
         <ProjectSection
           setIsModalOpen={setIsModalOpen}
           setCurrentData={setCurrentModalData}
         />
+        <ContactSection />
       </main>
 
       <ModalProject

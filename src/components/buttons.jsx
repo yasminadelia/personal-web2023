@@ -1,4 +1,4 @@
-const ButtonSys = ({ onClick, className, children, bgColor }) => {
+const ButtonSys = ({ onClick, className, children, bgColor, padding }) => {
   return (
     <button
       onClick={onClick}
@@ -10,7 +10,8 @@ const ButtonSys = ({ onClick, className, children, bgColor }) => {
       `}
     >
       <div
-        className={`rounded-full border py-1 px-2 
+        className={`rounded-full border 
+          ${padding ? padding : "py-1 px-2"}
         ${bgColor ? bgColor : "bg-theme1"}`}
       >
         {children}

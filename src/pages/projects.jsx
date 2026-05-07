@@ -40,6 +40,8 @@ const Projects = () => {
               webLink={item.webLink}
               repoLink={item.repoLink}
               coverImage={item?.coverImage}
+              badge={item?.badge}
+              metrics={item?.metrics}
               onClick={() => {
                 setCurrentModalData(item);
                 setIsModalOpen(true);

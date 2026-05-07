@@ -6,7 +6,7 @@ import { projects } from "../../content";
 
 const ProjectSection = ({ setIsModalOpen, setCurrentData }) => {
   return (
-    <Section title={"Highlighted Projects"}>
+    <Section title={"Highlighted Projects"} id="projects">
       <ul className="grid gap-4 pl-2 md:grid-cols-3">
         {projects.slice(0, 3).map((item) => (
           <CardProject
@@ -18,6 +18,8 @@ const ProjectSection = ({ setIsModalOpen, setCurrentData }) => {
             webLink={item?.webLink}
             repoLink={item?.repoLink}
             coverImage={item?.coverImage}
+            badge={item?.badge}
+            metrics={item?.metrics}
             onClick={() => {
               setCurrentData(item);
               setIsModalOpen(true);

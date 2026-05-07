@@ -14,12 +14,14 @@ const CardProject = ({
   webLink,
   repoLink,
   onClick,
+  badge,
+  metrics,
 }) => {
   return (
     <li
       className="min-h-[300px] rounded-[20px] border-b-8 
         border-r-8 border-transparent bg-transparent drop-shadow-lg cursor-pointer
-        transition duration-300 ease-in-out hover:border-black md:min-h-[500px]"
+        transition duration-300 ease-in-out hover:border-black hover:scale-[1.02] md:min-h-[500px]"
       onClick={onClick}
     >
       <div className="h-full rounded-xl border">
@@ -31,8 +33,15 @@ const CardProject = ({
               className="object-cover h-full w-full rounded-t-xl "
             ></Image>
           ) : (
-            <div className="flex h-full items-center justify-center">
-              <p>No Image</p>
+            <div className="flex h-full items-center justify-center bg-gradient-to-br from-theme2 to-theme4">
+              <p className="text-4xl">📱</p>
+            </div>
+          )}
+          {badge && (
+            <div className="absolute top-2 left-2">
+              <span className="bg-theme2 text-black text-xs font-bold px-3 py-1 rounded-full border-2 border-black">
+                {badge}
+              </span>
             </div>
           )}
           <div className="absolute right-2 bottom-2 flex flex-row space-x-2">
@@ -61,6 +70,11 @@ const CardProject = ({
               {date}
             </h4>
           </div>
+          {metrics && (
+            <p className="text-sm font-semibold text-theme5 bg-theme3 px-2 py-1 rounded-md inline-block">
+              {metrics}
+            </p>
+          )}
           <div className="grid grid-cols-1 gap-3 max-h-12 md:max-h-36 overflow-clip">
             {desc}
           </div>

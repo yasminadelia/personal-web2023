@@ -13,22 +13,33 @@ import ProjectCoverFarmakami from "./assets/images/cover-project-farmakami.png";
 
 const experiences = [
   {
+    role: "Full-Stack Developer",
+    company: "Akusara Gautama Solution",
+    period: "Oct 2023 - April 2026",
+    description: [
+      "Developed and maintained full-stack features for high-traffic government applications (200K+ daily users) using a microservices architecture",
+      "Improved application performance up to 3x by implementing Redis caching, optimizing API payloads, and applying cursor-based pagination",
+      "Integrated Vite into a large-scale React.js application, reducing build and load times by up to 2x",
+      "Designed and implemented recursive queries for hierarchical document archiving",
+      "Resolved security vulnerabilities identified by BSSN, including preventing information disclosure and securing sensitive parameters",
+      "Implemented MFA, OTP-based password recovery, CAPTCHA, and rate limiting to enhance authentication security",
+      "Collaborated with team members and provided technical guidance to improve development efficiency"
+    ],
+    tools: "React.js, Tailwind CSS, Laravel, PostgreSQL, Redis, MongoDB, Git"
+
+  },
+  {
     role: "Front-End Developer",
     company: "Mitramas Infosys Global",
-    period: "Sep 2022 - Now",
+    period: "Sep 2022 - Aug 2024",
     description: [
-      <p key={1}>
-        <strong>Projects:</strong> resume builder, candidates recruitment
-        management, employee and payslip management, project and task
-        management, leasing contract and invoice management, learning management
-        system
-      </p>,
-      <p key={2}>
-        Collaborated closely with team members, ranging from project manager,
-        UI/UX designer, and backend developers
-      </p>,
+      "Developed 8 integrated modules in MIGsys website (ERP system), enhancing operational efficiency. These modules include work shift and schedule management, employee and payslip management, resume builder, and recruitment management",
+      "Built and standardized reusable UI components, improving development speed and UI consistency",
+      "Implemented advanced features such as drag-and-drop interfaces, activity logs, custom calendars, and auto-saving forms",
+      "Developed PDF generation features and talent pool system to support recruitment workflows",
+      "Contributed to learning management system features and bug fixes",
     ],
-    tools: "Next.js, TailwindCSS, Ant Design, ReactPDF",
+    tools: "Next.js, Tailwind CSS, TypeScript, Ant Design, React Query, Git",
   },
   {
     role: "Software Developer Intern",
@@ -55,19 +66,51 @@ const experiences = [
   },
 ];
 
+const achievements = [
+
+  {
+    title: "High-Traffic System Performance",
+    description: "handling maintenance in high-traffic government application serving 200K+ daily users.",
+    icon: "👥"
+  },
+  {
+    title: "Performance Optimization",
+    description: "improving application performance by up to 3x through caching and optimization.",
+    icon: "⚡"
+  },
+  {
+    title: "Build Time Reduction",
+    description: "reducing build and load times by 2x by integrating Vite.",
+    icon: "🚀"
+  },
+  {
+    title: "Security Enhancement",
+    description: "resolving security vulnerabilities identified by BSSN.",
+    icon: "🔒"
+  },
+  {
+    title: "Full-Stack Expertise",
+    description: "developing 8+ production modules across multiple applications.",
+    icon: "💻"
+  }
+];
+
+const learningTopics = [
+  // "Go (GoFiber)",
+  "Advanced Web Security (OWASP)",
+  "System Architecture & Scalability",
+  "Performance Optimization Techniques"
+];
+
 const projects = [
   {
     title: "Learning System",
     date: "2021",
+    badge: "Internship Project",
+    metrics: "10+ reusable components",
     desc: (
       <>
-        A web based learning system for an institute in Singapore. This project
-        is part of my task when interning as a software developer. I
-        collaborated with a team of five to developed the front-end app. This
-        app was built using React.js, with styling done using Tailwind CSS, and
-        Redux was used for state management. Some of the features I worked on
-        included student and lecturer profiles, blog posts, and course task
-        submission.
+        Built a web-based learning system for a Singapore institute, developing 10+ reusable components including post views, theme switcher, search functionality, and comment sections. Collaborated with a team of 5 front-end developers to deliver student/lecturer profiles, blog posts, and course task submission features.
       </>
     ),
     tools: "ReactJS, TailwindCSS, Redux",
@@ -78,31 +121,16 @@ const projects = [
   {
     title: "UMKM Platform",
     date: "2021",
+    badge: "University Project",
+    metrics: "Full-stack with automated testing",
     desc: (
       <>
         <p>
-          A website for obtaining Small and Medium-sized Enterprise (SME or
-          UMKM) permissions. This project is part of Software Engineering
-          Project course in my undergraduate study. I collaborated with a team
-          of five members to create both the front-end and back-end applications
-          based on the client&apos;s specifications.{" "}
+          Developed a Small and Medium-sized Enterprise (UMKM) permission platform using Scrum methodology. Implemented automated testing achieving high code coverage using React Testing Library, Jest, and Django testing framework.
         </p>
 
         <p>
-          The front-end was built using React.js and styled using Tailwind CSS.
-          For the back-end, we utilized Django REST Framework. Additionally, we
-          implemented automated testing for both front-end and back-end, using
-          React Testing Library and Jest for front-end, and Django&apos;s
-          default testing library for back-end. In front-end, my
-          responsibilities included implementing footer, &apos;Izin UMK&apos;
-          form, and modal for &apos;Proyek Baru&apos;. In back-end, I worked on
-          creating serializers and validators for &apos;Izin UMK&apos; form.
-        </p>
-
-        <p>
-          This project spanned nearly one semester and followed the Scrum
-          framework, which involved various events such as sprint planning,
-          sprints, sprint reviews, and sprint retrospectives.
+          Implemented front-end of core forms and modals, as well as back-end serializers and validators. Project followed complete Scrum framework with sprint planning, reviews, and retrospectives over a full semester.
         </p>
       </>
     ),
@@ -112,50 +140,18 @@ const projects = [
     coverImage: ProjectCoverUMKM,
   },
   {
-    title: "MatkulPanda",
-    date: "2020",
-    desc: (
-      <>
-        <p>
-          A website used for discovering and providing testimonials for courses
-          held in Fasilkom UI. This project is part of my Software Engineering
-          course during my undergraduate studies. I collaborated with a team of
-          four to develop the application, from gathering requirements to its
-          implementation. We created various documents such as requirement
-          analysis, use case specifications, activity diagrams, design class
-          diagrams, and sequence diagrams. Additionally, we designed the user
-          interface using Figma.
-        </p>
-
-        <p>
-          For the front-end, we implemented it using HTML and CSS, while the
-          back-end was developed using Django and PostgreSQL. Specifically, my
-          contributions included the creation of &apos;Info Matkul&apos; page,
-          course testimonial list, and course detail page.
-        </p>
-      </>
-    ),
-    tools: "HTML, CSS, Bootstrap, Django, PostgreSQL",
-    webLink: "",
-    repoLink: "",
-  },
-  {
     title: "Farmakami",
     date: "2020",
+    badge: "University Project",
+    metrics: "Complex triggers & stored procedures",
     desc: (
       <>
         <p>
-          A web based pharmacy information system. This project was a group task
-          during my database course in undergraduate study. Our team consisted
-          of five members, and we implemented the application using PostgreSQL,
-          Django, HTML, CSS, and Bootstrap.{" "}
+          Developed a pharmacy information system with advanced database features. Implemented CRUD operations for pharmacy and medicine management, utilizing PostgreSQL triggers and stored procedures to automate delivery status workflows.
         </p>
 
         <p>
-          My specific contributions included implementing CRUD features on the
-          &apos;Balai Pengobatan&apos; and &apos;Obat&apos; pages. Additionally,
-          I created triggers and stored procedures to manage changes in the
-          delivery status.
+          Designed and executed complex database logic to ensure data integrity and automate business processes, demonstrating strong database architecture skills.
         </p>
       </>
     ),
@@ -164,47 +160,58 @@ const projects = [
     repoLink: "https://gitlab.com/basdatd40/farmakami",
     coverImage: ProjectCoverFarmakami,
   },
+  {
+    title: "MatkulPanda",
+    date: "2020",
+    badge: "University Project",
+    metrics: "Complete SDLC implementation",
+    desc: (
+      <>
+        <p>
+          Designed and developed a course review platform for Fasilkom UI students. Led the complete software development lifecycle from requirements gathering to implementation, creating comprehensive documentation including use cases, activity diagrams, and sequence diagrams.
+        </p>
+
+        <p>
+          Implemented course information pages, testimonial systems, and detailed course views using Django and PostgreSQL with a custom UI designed in Figma.
+        </p>
+      </>
+    ),
+    tools: "HTML, CSS, Bootstrap, Django, PostgreSQL",
+    webLink: "",
+    repoLink: "",
+    coverImage: null,
+  },
 ];
 
 const skills = ["team work", "attention to detail"];
 
-const tools = [
+const toolCategories = [
   {
-    logo: ReactLogo,
-    name: "ReactJS",
+    category: "Core Frontend",
+    tools: [
+      { logo: ReactLogo, name: "ReactJS" },
+      { logo: JSLogo, name: "JavaScript" },
+      { logo: HTMLLogo, name: "HTML" },
+      { logo: CSSLogo, name: "CSS" },
+      { logo: TailwindLogo, name: "TailwindCSS" },
+    ]
   },
   {
-    logo: JSLogo,
-    name: "JavaScript",
+    category: "Backend & Database",
+    tools: [
+      { logo: PythonLogo, name: "Python" },
+      { logo: PostgreLogo, name: "PostgreSQL" },
+    ]
   },
   {
-    logo: HTMLLogo,
-    name: "HTML",
-  },
-  {
-    logo: CSSLogo,
-    name: "CSS",
-  },
-  {
-    logo: TailwindLogo,
-    name: "TailwindCSS",
-  },
-  {
-    logo: GitLogo,
-    name: "Git",
-  },
-  {
-    logo: FigmaLogo,
-    name: "Figma",
-  },
-  {
-    logo: PythonLogo,
-    name: "Python",
-  },
-  {
-    logo: PostgreLogo,
-    name: "PostgreSQL",
-  },
+    category: "Tools & Others",
+    tools: [
+      { logo: GitLogo, name: "Git" },
+      { logo: FigmaLogo, name: "Figma" },
+    ]
+  }
 ];
 
-export { projects, experiences, skills, tools };
+
+
+export { projects, experiences, skills, toolCategories, achievements, learningTopics };
