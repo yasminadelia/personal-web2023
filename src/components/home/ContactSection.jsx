@@ -14,7 +14,7 @@ const ContactSection = () => {
         <div className="text-center max-w-2xl">
           <h3 className="text-2xl font-bold mb-4">Open to New Opportunities</h3>
           <p className="text-lg">
-            I'm currently open to full-stack engineering opportunities,
+            I&apos;m currently open to full-stack engineering opportunities,
             especially in roles focusing on user-friendly design and secure
             applications. Feel free to reach out!
           </p>

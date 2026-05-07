@@ -11,7 +11,7 @@ import LinkedinLogo from "../assets/images/logo-linkedin.svg";
 const About = () => {
   const ConnectCard = () => (
     <div className="mt-5 p-3 lg:p-6 bg-theme3 rounded-xl border-2 border-black xl:w-10/12 z-0">
-      <h2 className="text-2xl font-bold mb-4">Let's Connect!</h2>
+      <h2 className="text-2xl font-bold mb-4">Let&apos;s Connect!</h2>
       <div className="flex flex-wrap gap-3 items-center">
         <a
           href="mailto:yasminadelia11@gmail.com"
@@ -61,7 +61,7 @@ const About = () => {
         <div className="flex flex-col-reverse items-start md:flex-row md:relative">
           <div className="md:w-2/3 relative z-10">
             <h1 className="text-gray-100 mb-4 text-[1.5rem] md:text-[2rem] leading-relaxed font-bold">
-              Hi there, I'm Yasmin Adelia
+              Hi there, I&apos;m Yasmin Adelia
             </h1>
 
             <p className="text-left md:w-10/12">
