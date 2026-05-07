@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        blink: 'blink 1s step-end infinite',
+      },
+    },
     colors: {
       theme1: "#FFFCF3",
       theme2: "#FFF7B4",
