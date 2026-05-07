@@ -69,9 +69,11 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="z-10 text-center md:w-3/4 text-lg md:text-xl font-semibold  min-h-[4rem] flex items-center justify-center">
-            Software Engineer experienced in {displayedText}
-            <span className="inline-block w-[3px] h-[1.2em] bg-black ml-1 animate-blink align-middle"></span>
+          <p className="z-10 text-center md:w-3/4 text-lg md:text-xl font-semibold min-h-[4rem] flex items-center justify-center">
+            <span>
+              Software Engineer experienced in {displayedText}
+              <span className="inline-block w-[3px] h-[1.2em] bg-black ml-1 animate-blink align-middle"></span>
+            </span>
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mt-4">
